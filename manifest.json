@@ -1,0 +1,32 @@
+{
+    "manifest_version" : 1,
+    "name" : "RealTalk",
+    "version" : "1.0",
+    
+    "description" : "Makes youtubes livestream chat less awful",
+    "homepage_url" : "https://github.com/hyperunicorn/RealTalk",
+    "icons" : {
+        "48" : "icons/bulma-48px.jpg",
+        "96" : "icons/bulma-96px.jpg"
+    },
+    
+   "permissions" : [
+        "activetab",
+        "downloads",
+        "storage",
+        "tabs",
+        "webRequest"
+    ],
+     
+    "host_permissions" : [
+        "*//youtube.com/*",
+        "*//ytlarge.com/*"
+    ],
+     
+    "browser_action" : {
+        "default_icon" : "icons/bulma-48px.png",
+        "default_title" : "RealTalk",
+        "default_popup" : "popup/chooseAction.html"
+    }     
+}
+     
