@@ -1,32 +1,41 @@
 {
-    "manifest_version" : 1,
-    "name" : "RealTalk",
-    "version" : "1.0",
-    
-    "description" : "Makes youtubes livestream chat less awful",
-    "homepage_url" : "https://github.com/hyperunicorn/RealTalk",
-    "icons" : {
-        "48" : "icons/bulma-48px.jpg",
-        "96" : "icons/bulma-96px.jpg"
+    "manifest_version": 3,
+    "name": "RealTalk",
+    "version": "1.0",
+
+    "description": "Makes youtube livestream comments more tolerable",
+    "homepage_url": "https://github.com/hyperunicorn/RealTalk",
+    "icons": {
+        "48": "icons/bulma_48px.png"
     },
-    
-   "permissions" : [
-        "activetab",
-        "downloads",
+
+    "permissions": [
+        "activeTab",
         "storage",
+        "unlimitedStorage",
+        "scripting",
         "tabs",
-        "webRequest"
+        "alarms"
     ],
-     
-    "host_permissions" : [
-        "*//youtube.com/*",
-        "*//ytlarge.com/*"
-    ],
-     
-    "browser_action" : {
-        "default_icon" : "icons/bulma-48px.png",
-        "default_title" : "RealTalk",
-        "default_popup" : "popup/chooseAction.html"
-    }     
+    
+    "browser_specific_settings": {
+        "gecko": {
+            "id" : "realtalk@realtalk.com"
+         }
+    },
+
+
+
+    "background": {
+        "scripts" : ["RealTalk.js"]
+    },        
+
+    "page_action" : {
+        "browser_style" : true,
+        "default_icon":{
+            "48" : "icons/bulma_48px.png",
+            "96" : "icons/bulma_96px.png"
+        },
+        "show_matches" : ["https://*.youtube.com/*"]
+    }
 }
-     

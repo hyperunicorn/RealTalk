@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title id="title">Press the load button</title>
+    </head>
+
+
+    <body>
+        <h3 style="text-align : center" id="titleHeader"><h3>
+        
+        <div id="mainWindow" style="display: flex; overflow: hidden; justify-content: center; align-items: start" >
+            <img id="animeTiddies" src="bulma.gif" style="max-height: 80vh">
+            <div id="content" style="max-height: 90vh">
+                <div id="filterInputs" style="display:flex; align-self: center">
+                    <input id="filterText" placeholder="Enter username here">
+                    <button id="filterButton">Filter Usernames</button>
+                    <button id="removeFilters">Remove Filters</button>
+                </div> 
+                <div id="chat" style="max-height: 70vh; overflow: scroll; margin-bottom: 1%">
+                    <h1 id="loading">Loading comments</h1>
+                </div>
+                <div id="buttons" style="display:flex; marginTop: 1%">
+                    <button id="load">Load Comments</button>
+                    <button id="download">Download as JSON</button>
+            </div>    
+        </div>         
+        <script src="analyseThis.js"></script>
+    </body>
+</html>
